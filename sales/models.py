@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+from orders.models import Order
+
+
+class Sale(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    amount = models.PositiveIntegerField(blank=True, null=True)
