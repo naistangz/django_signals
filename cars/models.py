@@ -14,4 +14,3 @@ class Car(models.Model):
         return f"{self.name}-{self.price}-{self.buyer}"
 
 
-
